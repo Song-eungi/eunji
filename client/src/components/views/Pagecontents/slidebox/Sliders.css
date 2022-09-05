@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+  }
+  
+  :root {
+    --heights: 50vh;
+    --widths: 100%;
+  }
+  
+  .slider-containers {
+    height: var(--heights);
+    width: var(--widths);
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+  }
+  
+  .active {
+    display: inline-block;
+  }
+  
+  .inactive {
+    display: none;
+  }
+  
+  .slides {
+    height: var(--heights);
+    width: var(--widths);
+    position: relative;
+  }
+  
+  .slide-images {
+    width: 100%;
+    height: 90%;
+    position: absolute;
+    object-fit: cover;
+  }
+  
+  .slide-titles,
+  .slide-texts
+   {
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-size: 50px;
+    position: absolute;
+    text-align: center;
+    top: 15%;
+    z-index: 10;
+  }
+  .wrap{
+   align-items: center;
+   justify-content: center;
+   
+  }
+  .slide-buttons {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: 42%;
+    margin:auto;
+    display: block;
+    padding:0 2em;
+  
+    
+    width: 260px;
+    height: 70px;
+    font-size: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .slide-buttons:hover{
+    background-color: #f7f7f7;
+    box-shadow: 0px 15px 20px rgba(255, 255, 255, 0.4);
+    color: rgb(0, 0, 0);
+    font-weight: bolder;
+    transform: translateY(-7px);
+    z-index: 1;
+  }
+
+
+  .slide-texts {
+    top: 35%;
+    font-size: 2rem;
+  }
+  
+  .prev,
+  .next {
+    cursor: pointer;
+    z-index: 100;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 1rem;
+    margin-top: -3rem;
+    font-size: 40px;
+    font-weight: bold;
+    border-radius: 0px 5px 5px 0px;
+  }
+  
+  .prev:hover,
+  .next:hover {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: all 0.5s ease-in;
+  }
+  
+  .next {
+    right: 0;
+    border-radius: 5px 0px 0px 5px;
+  }
+  
+  
